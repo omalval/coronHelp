@@ -1,0 +1,14 @@
+<%= simple_form_for(@garde) do |f| %>
+  <%= f.input :name, label: 'Mon service' %>
+  <%= f.input :description, label: 'Description'  %>
+
+  <%= f.input :address, label: 'Mon adresse' %>
+
+  <%= f.input :quantity_max, label: 'Nombre de personnes maximum (en cas de garde)' %>
+  <%= f.input :contact, label: 'Mon numéro de téléphone ou mail' %>
+  <%= f.input :start_availability_date, label: 'date de début', as: :string, required: false, input_html: {class: "datepicker"} %>
+  <%= f.input :end_availability_date, label: 'date de fin', as: :string, required: false, input_html: {class: "datepicker"} %>
+
+
+  <%= f.submit "Ok, je propose mon aide", class: "cool-bouton-big"  %>
+  <% end %>

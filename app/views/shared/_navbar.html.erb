@@ -1,0 +1,55 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+  <%= link_to root_path do %>
+    <img class="logo" src=""/>
+  <% end %>
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+          <%= link_to "Proposer/Demander un service", new_garde_path, class: "nav-link d-block d-sm-none" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Mes gardes", my_gardes_path, class: "nav-link d-block d-sm-none" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Mes réservations", my_reservations_path, class: "nav-link d-block d-sm-none" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Mon profil", "#", class: "nav-link d-block d-sm-none" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Log out", destroy_user_session_path, class: "nav-link d-block d-sm-none" %>
+      </li>
+
+      <button class="border-none add-meal" type="button" >
+          <%= link_to "Proposer un service", new_garde_path %>
+        </button>
+
+
+
+      <li class="dropdown align-self-center d-none d-sm-block mr-3">
+        <button class="dropdown-toggle border-none" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Mes infos
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <% if user_signed_in? %>
+
+          <%= link_to "Mes services", my_gardes_path, class: "dropdown-item" %>
+          <%= link_to "Mes réservations", my_reservations_path, class: "dropdown-item" %>
+          <%= link_to "Mon profil", "#", class: "dropdown-item d-block d-sm-none" %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          <% else %>
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <% end %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

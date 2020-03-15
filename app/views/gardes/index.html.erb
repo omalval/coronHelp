@@ -1,0 +1,44 @@
+
+<!-- mosaic of meals -->
+<div class="cards_and_map_container">
+  <div class="intro">
+    <div class="mot">Bienvenu sur CoronAides, la plateforme de "solidarité Coronavirus" du groupe Nice-Matin.
+    </div>
+    <div class="expli">
+      Le principe? Garde d'enfants, faire des courses pour des personnes âgées, échanges de produits de première nécessité, un peu de réconfort... Vous pouvez proposer tous types d'aides à vos voisins ou habitants de votre quartier. <b>Pour proposer vos services, rendez-vous dans l'onglet "Proposer un service".</b>
+    </div>
+    <div class="expli">
+      Notre plateforme ne vous permet pas de réserver une garde d'enfants ou une livraison de courses à domicile. Il s'agit UNIQUEMENT d'un outil de recensement des bonnes volontés sur notre territoire. C'est à vous de prendre contact par mail ou le cas échéant au téléphone avec les personnes ayant proposé leurs services.
+    </div>
+  </div>
+
+    <% @gardes.each do |garde| %>
+      <!-- <div class="box col-6"> -->
+
+      <div class="garde-card">
+
+        <div class="meal-card-content">
+            <div class="meal-card-title">
+              <div class="garde-name"><%= garde.name %></div>
+            </div>
+            <div class="garde-details"><%= garde.address %></div>
+            <div class="garde-details"><%= garde.start_availability_date %></div>
+
+
+                <div class="garde-details">Proposé par: <%= garde.user.username %></div>
+
+
+            </div>
+        <button class="bouton-ok">
+
+          <%= link_to "+", garde_path(garde) %>
+        </button>
+      </div>
+    <% end %>
+
+  <div id="map"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>
+

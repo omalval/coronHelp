@@ -1,0 +1,182 @@
+.container-formulaire {
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 20px;
+  color: #000e2b;
+}
+
+.intro {
+  grid-column: 1 / 4;
+}
+
+.mot {
+  font-weight: 600;
+  padding: 20px;
+  font-size: 22px;
+  color: #000e2b;
+}
+
+.expli {
+  color: #000e2b;
+  padding: 20px;
+}
+
+
+.form-meals {
+  padding: 20p;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formu-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 10px;
+
+}
+
+.cool-bouton {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #02e3b7;
+  transition: background 0.3s ease;
+  opacity: 1;
+  width: 200px;
+  text-align: center;
+}
+
+
+
+.cool-bouton-big {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #02e3b7;
+  transition: background 0.3s ease;
+  opacity: 1;
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.cool-bouton a {
+  color: white;
+  text-decoration: none;
+}
+
+.go-back-bouton {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #02e3b7;
+  transition: background 0.3s ease;
+  opacity: 1;
+  width: 300px;
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.go-back-bouton a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.cards_and_map_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-gap: 10px;
+}
+
+
+
+.garde-card {
+  width: 290px;
+  height: 260px;
+  position: relative;
+  color: #000e2b;
+  margin: 1rem 1rem 1rem 1rem;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+}
+
+// .meal-card-disabled {
+//   cursor: not-allowed;
+//   opacity: .3;
+//   color: rgba(0, 0, 0, 0.4);
+//   background-color: rgba(0, 0, 0, 0.2);
+//   z-index: 2;
+// }
+
+.garde-name {
+  font-size: 25px;
+  font-weight: 800;
+  padding: 15px;
+}
+
+.garde-details {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+
+}
+
+.box:hover {
+  box-shadow: none;
+  transform: scale(1.03);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+.bouton-ok {
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: #02e3b7;
+  opacity: 1;
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+}
+
+.bouton-ok a {
+  font-size: 50px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-align: center;
+  position: absolute;
+  bottom: -20px;
+  left: 9px;
+}
+
+
+
+.grey {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(150, 150, 150, 0);
+}
+
+.material-icons {
+  font-size: 20px;
+}

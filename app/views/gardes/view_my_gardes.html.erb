@@ -1,0 +1,31 @@
+<div class="resa-container">
+
+
+
+  <h2 class="my-services">Mes services</h2>
+      <% @my_gardes.each do |garde| %>
+        <div class="card-items" >
+
+          <div class="card-item-infos">
+            <p><%= garde.name %></p>
+            <p><%= garde.start_availability_date %></p>
+            <% if garde.quantity_max != nil %>
+            <p>Nombre max :<%=  garde.quantity_max %></p>
+            <% end %>
+            <p><%= garde.description %></p>
+
+
+            <div class="choix">
+              <p><%= link_to "Edit", edit_garde_path(garde.id), class:"btn btn-outline-dark" %></p>
+              <p><%= link_to "Delete", garde_path(garde.id), class:"btn btn-outline-dark",
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+             </p>
+           </div>
+
+
+          </div>
+        </div>
+    <% end %>
+
+</div>

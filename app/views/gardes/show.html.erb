@@ -1,0 +1,49 @@
+<div class="resa-container">
+
+          <h1><%= @garde.name.capitalize %></h1>
+
+
+      <div class="garde-info-details">
+        <% if @garde.user == current_user %>
+          <p>Proposé par: Moi</p>
+          <% else %>
+          <p>Proposé par <%= @garde.user.username %> </p>
+          <% end %>
+        <p>Description: <%= @garde.description %> </p>
+        <% if @garde.quantity_max != nil %>
+        <p> Nombre de personnes max : <%= @garde.quantity_max %> </p>
+        <p>Adresse: <%= @garde.address %> </p>
+        <p>Contact: <%= @garde.contact %> </p>
+        <p>Date: <%= @garde.start_availability_date %> </p>
+        <% end %>
+
+      </div>
+    <!-- div photo + nom -->
+    <div class="reservation">
+
+      <% if @garde.user != current_user %>
+        <div class="resa">
+
+            <%= simple_form_for(@reservation) do |f| %>
+              <%= hidden_field_tag :garde_id, @garde.id %>
+              <%= f.input :pick_up_date, label: 'Choisir une date' %>
+              <%= f.submit "Ok, je réserve", class: "cool-bouton" %>
+            <% end %>
+          <% else %>
+
+        </div>
+      <% end %>
+
+    </div>
+    <div class="choix">
+    <% if @garde.user == current_user %>
+    <div class="go-back-bouton">
+    <%= link_to "Retour aux services", gardes_path %>
+    </div>
+    <p><%= link_to "Modifier", edit_garde_path(@garde), class:"btn btn-outline-dark" %>
+    <% end %>
+
+    </p>
+  </div>
+</div>
+

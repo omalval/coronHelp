@@ -1,0 +1,23 @@
+<div class="resa-container">
+  <h1>Mes réservations</h1>
+    <% @my_reservations.each do |reservation| %>
+      <div class="order-card">
+
+
+        <div class="my-orders-info-details">
+          <div class="my-resa-details">
+            <h2><%= reservation.garde.name %></h2>
+            <p><%= reservation.garde.description %></p>
+            <h5>🗓 Réservé pour le <strong><%= reservation.pick_up_date %></strong></h5>
+            <h5>Proposé par <strong><%= reservation.garde.user.username %></strong></h5>
+
+
+
+
+            </div>
+          </div>
+
+
+        </div>
+      <% end %>
+    </div>

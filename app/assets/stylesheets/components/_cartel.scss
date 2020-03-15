@@ -1,0 +1,109 @@
+.choix {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+}
+
+.resa-container {
+  // background-color: #FFFFFF;
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 20px;
+  color: #000e2b;
+}
+
+
+
+.order-card {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  color: #000e2b;
+  margin-bottom: 10px;
+  // margin: 1rem 1rem 1rem 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+}
+
+
+.my-resa-details {
+  padding: 20px;
+}
+
+.card-items {
+  overflow: hidden;
+
+  max-width: 600px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  align-items: center;
+  margin-bottom: 20px;
+  // margin: 20px;
+}
+
+.card-items img {
+  height: 100%;
+  width: 200px;
+  object-fit: cover;
+}
+
+.card-items h2 {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 3px;
+}
+
+.card-items h5 {
+  font-size: 18px;
+  font-weight: lighter;
+  padding: 2px;
+  font-family: $body-font;
+}
+
+.card-items p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-items .card-item-infos {
+  padding: 16px;
+}
+
+
+.order-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.display-status-box {
+  border: 1px solid rgb(80, 80, 80);
+  border-radius: 4px;
+  padding: 8px 15px;
+}
+
+
+
+.review-order {
+  align-self: flex-end;
+  padding: 16px;
+//   font-size: 20px;
+//   color: black;
+}
+
+.fa-user-edit {
+  font-size: 16px;
+  color: white;
+}
+
+.card-item-infos p {
+  font-size: 20px;
+  color: black;
+}
