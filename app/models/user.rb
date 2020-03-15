@@ -8,5 +8,5 @@ class User < ApplicationRecord
   has_many :reservations, dependent: :destroy
   has_many :booked_reservations, through: :reservations, source: :gardes
 
-
+  validates :username, presence: true
 end
