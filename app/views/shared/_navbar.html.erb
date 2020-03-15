@@ -22,15 +22,9 @@
         <%= link_to "Mes réservations", my_reservations_path, class: "nav-link d-block d-sm-none" %>
       </li>
       <li class="nav-item active">
-        <%= link_to "Mon profil", "#", class: "nav-link d-block d-sm-none" %>
-      </li>
-      <li class="nav-item active">
-        <%= link_to "Log out", destroy_user_session_path, class: "nav-link d-block d-sm-none" %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link d-block d-sm-none" %>
       </li>
 
-      <button class="border-none add-meal" type="button" >
-          <%= link_to "Proposer un service", new_garde_path %>
-        </button>
 
 
 
@@ -43,7 +37,7 @@
 
           <%= link_to "Mes services", my_gardes_path, class: "dropdown-item" %>
           <%= link_to "Mes réservations", my_reservations_path, class: "dropdown-item" %>
-          <%= link_to "Mon profil", "#", class: "dropdown-item d-block d-sm-none" %>
+
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           <% else %>
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
