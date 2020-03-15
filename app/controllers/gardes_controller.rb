@@ -1,11 +1,10 @@
 class GardesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show], raise: false
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_garde, only: [:show, :edit, :update, :destroy]
 
 
   def index
     @gardes = Garde.geocoded
-
 
     @markers = @gardes.map do |garde|
       {
